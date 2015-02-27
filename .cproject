@@ -70,11 +70,13 @@
 							<tool id="de.innot.avreclipse.tool.linker.winavr.app.debug.768982827" name="AVR C Linker" superClass="de.innot.avreclipse.tool.linker.winavr.app.debug"/>
 							<tool id="de.innot.avreclipse.tool.cpplinker.app.debug.1177707348" name="AVR C++ Linker" superClass="de.innot.avreclipse.tool.cpplinker.app.debug">
 								<option id="de.innot.avreclipse.cpplinker.option.libs.1258308058" name="Libraries (-l)" superClass="de.innot.avreclipse.cpplinker.option.libs" valueType="libs">
+									<listOptionValue builtIn="false" value="Arduino_zTTLV_lib"/>
 									<listOptionValue builtIn="false" value="Arduino_Core_lib"/>
 									<listOptionValue builtIn="false" value="Arduino_Simu_Sine_lib"/>
 									<listOptionValue builtIn="false" value="m"/>
 								</option>
 								<option id="de.innot.avreclipse.cpplinker.option.libpath.363879897" name="Libraries Path (-L)" superClass="de.innot.avreclipse.cpplinker.option.libpath" valueType="stringList">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Arduino_zTTLV_lib/${ConfigName}}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Arduino_Core_lib/${ConfigName}}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Arduino_Simu_Sine_lib/${ConfigName}}&quot;"/>
 								</option>

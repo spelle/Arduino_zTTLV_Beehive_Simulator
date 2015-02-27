@@ -13,7 +13,7 @@
 
 #define DEBUG
 
-#ifdef DEBUG
+#if defined( DEBUG )
 
 #include <stdio.h>
 
@@ -26,13 +26,13 @@ static int uart_putchar (char c, FILE *stream)
 }
 
 #undef PDEBUG // Just in case unimplemented
-#ifndef PDEBUG
-	#define PDEBUG( ... ) \
-		printf( __VA_ARGS__ )
-#else
+#if defined( PDEBUG )
 	#define PDEBUG( ... ) /* nothing */
-#endif
+#else /* !defined( PDEBUG ) */
+	#define PDEBUG( ... ) \
+	printf( __VA_ARGS__ )
+#endif /* !defined( PDEBUG ) */
 
-#endif // DEBUG
+#endif /* defined( DEBUG ) */
 
 #endif /* ARDUINO_ZTTLV_BEEHIVE_SIMULATOR_H_ */
