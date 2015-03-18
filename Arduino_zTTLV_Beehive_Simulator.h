@@ -11,7 +11,7 @@
 #include <Arduino.h>
 #include <zTTLV_Buffer.h>
 
-#define DEBUG
+//#define DEBUG
 
 #if defined( DEBUG )
 
@@ -21,9 +21,11 @@ static FILE uartout = {0} ;
 
 static int uart_putchar (char c, FILE *stream)
 {
-    Serial.write(c) ;
-    return 0 ;
+	Serial.write(c) ;
+	return 0 ;
 }
+
+#endif /* defined( DEBUG ) */
 
 #undef PDEBUG // Just in case unimplemented
 #if defined( PDEBUG )
@@ -32,7 +34,5 @@ static int uart_putchar (char c, FILE *stream)
 	#define PDEBUG( ... ) \
 	printf( __VA_ARGS__ )
 #endif /* !defined( PDEBUG ) */
-
-#endif /* defined( DEBUG ) */
 
 #endif /* ARDUINO_ZTTLV_BEEHIVE_SIMULATOR_H_ */
